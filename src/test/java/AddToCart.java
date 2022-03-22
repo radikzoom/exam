@@ -2,9 +2,10 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 
-public class addToCart {
+public class AddToCart {
 
     @Test
     public void addItemToCart(){
@@ -14,7 +15,8 @@ public class addToCart {
 
         step("Добавляем товар в корзину", () -> {
             TestPages.mainPage.cartItem()
-                    .click();
+                    .hover();
+            sleep(2000);
             TestPages.mainPage.addToCardButton()
                     .click();
         });

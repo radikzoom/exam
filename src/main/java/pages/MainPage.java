@@ -11,5 +11,4 @@ public class MainPage {
 
     public SelenideElement iconSuccessfully() {return $(".icon-ok").as("Успешное добавление");}
 
-
 }
